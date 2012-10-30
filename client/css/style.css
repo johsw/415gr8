@@ -27,13 +27,15 @@ body {
 }
 
 a {
-  color: #0088cc;
+  color: #333333;
   text-decoration: none;
+  border-bottom: 1px dotted;
 }
 
 a:hover {
-  color: #005580;
-  text-decoration: underline;
+  color: #333333;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 p {
@@ -97,7 +99,27 @@ font-family: 'Open Sans', sans-serif;
   max-width: 250px;
   width: 250px;
 }
-
+blockquote {
+display: none;
+margin: 10px 0;
+padding: 10px 10px 10px 25px;
+border: inherit;
+-webkit-border-radius: .5em; 
+ -moz-border-radius: .5em;
+ border-radius: .5em;
+ background: #EEE;
+ font-family: serif, Times, "Times New Roman";
+width: 220px;
+text-align: left;
+}
+#source {
+ font-size: 10px;
+ text-align: right;
+ display: block;
+}
+#source {
+ border: none;
+}
 #button {
   display: inline-block;
   zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
