@@ -111,11 +111,13 @@ border: inherit;
  font-family: serif, Times, "Times New Roman";
 width: 220px;
 text-align: left;
+font-style: italic;
 }
 #source {
  font-size: 10px;
  text-align: right;
  display: block;
+ font-style: normal;
 }
 #source {
  border: none;
