@@ -1,4 +1,4 @@
-socket = io.connect('http://localhost', {port:8080});
+socket = io.connect('http://ws.415gr8.dk');
 
 $(document).ready(function() {
   $('#quote-link').click(function(){
