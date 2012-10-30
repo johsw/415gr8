@@ -83,10 +83,19 @@ margin:0;
 padding:0;
 background-color:#f4f4f4;
 }
+#content-wrapper {
+  text-align: center;
+  width: 100%;
+}
 
-#content {
-text-align: center;
-
+#content, #counter-text {
+  margin: 5px auto;
+text-align: justify;
+padding:10px;
+font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  max-width: 250px;
+  width: 250px;
 }
 
 #button {
@@ -94,7 +103,7 @@ text-align: center;
   zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
   *display: inline;
   vertical-align: baseline;
-  margin: 15px 2px;
+  width: 180px;
   outline: none;
   cursor: pointer;
   text-align: center;
