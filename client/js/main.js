@@ -3,7 +3,7 @@ socket = io.connect('http://ws.415gr8.dk');
 $(document).ready(function() {
   $.getJSON('/ajax/read',{},
    function(json){
-      console.log(json);
+     $('#counter').hide().text(json.count).fadeIn("slow");
   });
   
   
@@ -19,7 +19,7 @@ $(document).ready(function() {
   $('#button').click(function() {
     $.getJSON('/ajax/update',{},
      function(json){
-        console.log(json);
+      $('#counter').hide().text(json.count).fadeIn("slow");
     });
     return false;
   });
