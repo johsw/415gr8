@@ -1,7 +1,7 @@
 socket = io.connect('http://ws.415gr8.dk');
 
 $(document).ready(function() {
-  $.getJSON('/read',{},
+  $.getJSON('/ajax/read',{},
    function(json){
       console.log(json);
   });
@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
   });
   $('#button').click(function() {
-    $.getJSON('/update',{},
+    $.getJSON('/ajax/update',{},
      function(json){
         console.log(json);
     });
