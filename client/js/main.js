@@ -1,6 +1,12 @@
 socket = io.connect('http://ws.415gr8.dk');
 
 $(document).ready(function() {
+  $.getJSON('/read',{},
+   function(json){
+      console.log(json);
+  });
+  
+  
   $('#quote-link').click(function(){
     $('#quote').show();
     return false;
@@ -11,7 +17,10 @@ $(document).ready(function() {
     });
   });
   $('#button').click(function() {
-    socket.emit('increment');
+    $.getJSON('/update',{},
+     function(json){
+        console.log(json);
+    });
     return false;
   });
 });

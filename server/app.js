@@ -2,9 +2,9 @@ var config  = require('./../../config');
 var mongodb = require('mongodb');
 
 count = 0;
-var server = new mongodb.Server("127.0.0.1", 27017, {});
+var server = new mongodb.Server("127.0.0.1", 27017, {safe:false});
 new mongodb.Db('415gr8', server, {}).open(function (error, client) {
-
+   
   if (error) {
     throw error;
   }
@@ -23,18 +23,18 @@ new mongodb.Db('415gr8', server, {}).open(function (error, client) {
   //Recieve ajax call
   var http = require('http');
   http.createServer(function (req, res) {
-
-    if (req.url == '/update') {
+    
+    if (req.url == '/ajax/update') {
       incrementCount(function(count) {
         sendCount(res, count);
       });
     }
-    if (req.url == '/read') {
+    if (req.url == '/ajax/read') {
       getCount(function(count) {
         sendCount(res, count);
       });
     }
-    if (req.url != '/read' && req.url != '/update') {
+    if (req.url != '/ajax/read' && req.url != '/ajax/update') {
       res.writeHead(404, {'Content-Type': 'text/plain'});
       res.write("404 Not Found\n");
       res.end();
