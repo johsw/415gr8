@@ -87,7 +87,10 @@ background-color:#f4f4f4;
 }
 #content-wrapper {
   text-align: center;
-  width: 100%;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  
 }
 
 #content, #counter-text {
@@ -96,38 +99,16 @@ text-align: justify;
 padding:10px;
 font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  max-width: 250px;
-  width: 250px;
+
 }
-blockquote {
-display: none;
-margin: 10px 0;
-padding: 10px 10px 10px 25px;
-border: inherit;
--webkit-border-radius: .5em; 
- -moz-border-radius: .5em;
- border-radius: .5em;
- background: #EEE;
- font-family: serif, Times, "Times New Roman";
-width: 220px;
-text-align: left;
-font-style: italic;
-}
-#source {
- font-size: 10px;
- text-align: right;
- display: block;
- font-style: normal;
-}
-#source {
- border: none;
-}
+
 #button {
+  margin: 0 auto;
   display: inline-block;
   zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
   *display: inline;
   vertical-align: baseline;
-  width: 180px;
+  width: 210px;
   outline: none;
   cursor: pointer;
   text-align: center;
