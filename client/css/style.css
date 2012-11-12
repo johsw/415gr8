@@ -129,6 +129,7 @@ font-family: 'Open Sans', sans-serif;
   background: -moz-linear-gradient(top,  #f16c7c,  #bf404f);
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f16c7c', endColorstr='#bf404f');
 }
+
 #button:hover {
   text-decoration: none;
   background: #ba4b58;
@@ -143,4 +144,16 @@ font-family: 'Open Sans', sans-serif;
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bf404f', endColorstr='#f16c7c');
   position: relative;
   top: 1px;
+}
+#button.inactive, #button.inactive:active {
+  color: #eee;
+  pointer-events: none;
+  cursor: default;
+  background: #da5867;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#aaa));
+  background: -moz-linear-gradient(top,  #eee,  #aaa);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee', endColorstr='#aaa');
+  border: solid 1px #bbb;
+  position: relative;
+  top: 0px;
 }

@@ -1,6 +1,7 @@
 socket = io.connect('http://ws.415gr8.dk');
 
 $(document).ready(function() {
+  vlicked = false;
   $.getJSON('/ajax/read',{},
    function(json){
      $('#counter').text(json.count).fadeIn("slow");
@@ -17,10 +18,14 @@ $(document).ready(function() {
     });
   });
   $('#button').click(function() {
-    $.getJSON('/ajax/update',{},
-     function(json){
-      $('#counter').text(json.count).fadeIn("slow");
-    });
+    if (!$(this).hasClass('inactive')) {
+      $('#button').addClass('inactive').text('Tak for deltagelsen!');
+      $.getJSON('/ajax/update',{},
+       function(json){
+        $('#counter').text(json.count).fadeIn("slow");
+
+      });
+    }
     return false;
   });
 });
